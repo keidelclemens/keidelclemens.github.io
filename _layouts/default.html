@@ -4,7 +4,13 @@
 <html lang="en-us">
   <head>
     <title>
-      {{page.title}}
+      {% if page.layout == "book" %}
+        {{page.title}} - {{site.title}}
+      {% elif page.layout == "chapter" %}
+        {{page.title}} - {{back_book_title}} - {{site.title}}
+      {% else %}
+        {{site.title}}
+      {% endif %}
     </title>
     <link rel="stylesheet" type="text/css" href="/resources/style.css">
     {% if page.redirect %}
