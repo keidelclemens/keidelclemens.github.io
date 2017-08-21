@@ -5,11 +5,11 @@
   <head>
     <title>
       {% if page.layout == "book" %}
-        {{page.title}} - {{site.title}}
+        {{ page.title }} - {{ site.title }}
       {% elsif page.layout == "chapter" %}
-        {{page.title}} - {{back_book_title}} - {{site.title}}
+        {{ page.title }} - {{ site.title }}
       {% else %}
-        {{site.title}}
+        {{ site.title }}
       {% endif %}
     </title>
     <link rel="stylesheet" type="text/css" href="/resources/style.css">
