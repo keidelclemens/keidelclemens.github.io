@@ -86,3 +86,7 @@ img {
 #content a {
     color: black;
 }
+
+.front-list {
+    max-width: 400px;
+}
