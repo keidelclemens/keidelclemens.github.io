@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -10,29 +8,36 @@
         {{ page.title }} - {{ site.title }}
       {% else %}
         {{ site.title }}
-      {% endif %}
+{% endif %}
     </title>
     <link rel="stylesheet" type="text/css" href="/resources/css/style.css">
-    {% if page.redirect %}
+        {% if page.redirect %}
       <meta http-equiv="refresh" content="2; URL={{ page.redirect }}">
-    {% endif %}
+{% endif %}
   </head>
   <body>
-    <a href="/">
       <header>
-        <h1>{{ site.title }}</h1>
-      </header>
-    </a>
-    <div id="content">
+          <div id="header-inner">
+              <div id="title">
+            <a href="index.html">{{ site.title }}</a>
+              </div>
+              <nav>
       <form action="/search" method="get" align="right">
         <label for="search_box">Search</label>
         <input type="text" id="search_box" name="query">
         <input type="submit" value="search">
-      </form>
+      </form></br>
+          <a href="about.html">about</a>
+              </nav>
+          </div>
+      </header>
+    <div id="content">
       {{ content }}
       {% if page.comments %}
         {% include comments.html %}                            
-      {% endif %}
+{% endif %}
     </div>
+    <footer>
+    </footer>
   </body>
 </html>
