@@ -8,29 +8,35 @@ comments: false
   <tr align="center" style="vertical-align:top">
     <td width="50%">
       <h3>Ruth</h3>
+      <div class="list-group">
       {% for book in sorted %}
         {% if book.owner == 'ruth' %}
-          <a href="{{book.url}}">{{book.title}}</a><br>
+          <a href="{{book.url}}" class="list-group-item">{{book.title}}</a>
         {% endif %}
       {% endfor %}
+      </div>
     </td>
     <td width="50%">
       <h3>Jonathan</h3>
+      <div class="list-group">
       {% for book in sorted %}
         {% if book.owner == 'jonathan' %}
-          <a href="{{book.url}}">{{book.title}}</a><br>
+          <a href="{{book.url}}" class="list-group-item">{{book.title}}</a>
         {% endif %}
       {% endfor %}
+      </div>
     </td>
   </tr>
   <tr align="center" style="vertical-align:top">
     <td colspan="2" width="100%">
       <h3>Family</h3>
+      <div class="list-group">
       {% for book in sorted %}
         {% if book.owner == 'family' %}
-          <a href="{{book.url}}">{{book.title}}</a><br>
+          <a href="{{book.url}}" class="list-group-item">{{book.title}}</a>
         {% endif %}
       {% endfor %}
+      </div>
     </td>
   </tr>
 </table>
