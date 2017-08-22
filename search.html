@@ -9,6 +9,7 @@ layout: default
       "{{ chapter.url | slugify }}": {
         "title": "{{chapter.title | xml_escape}}",
         "author": "{{ chapter.owner | xml_escape }}",
+        "content": {{ chapter.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ chapter.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
