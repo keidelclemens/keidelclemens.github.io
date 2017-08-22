@@ -31,6 +31,7 @@
   }
 
   var searchTerm = getQueryVariable('query');
+  console.log(searchTerm);
 
   if (searchTerm) {
     document.getElementById('search-box').setAttribute("value", searchTerm);
@@ -41,7 +42,6 @@
       this.field('id');
       this.field('title', { boost: 10 });
       this.field('author');
-      this.field('category');
       this.field('content');
     });
 
@@ -50,11 +50,11 @@
         'id': key,
         'title': window.store[key].title,
         'author': window.store[key].author,
-        'category': window.store[key].category,
         'content': window.store[key].content
       });
 
       var results = idx.search(searchTerm); // Get lunr to perform a search
+      console.log(results);
       displaySearchResults(results, window.store); // We'll write this in the next section
     }
   }
