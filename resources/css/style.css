@@ -71,9 +71,21 @@ nav {
     text-align: right;
 }
 
-img {
-    max-width: 90%;
+figure {
+    display: table;
+    width: 1px;
+    border: 1px solid;
+    padding: 5px;
+    margin: 10px;
+}
+
+img, figcaption {
     height: auto;
+    display: table-row;
+}
+
+figcaption {
+    font-size: 80%;
 }
 
 #content {
