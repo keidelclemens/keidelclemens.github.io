@@ -13,9 +13,8 @@ layout: default
     {% if chapter.header %}
       <h3>{{ chapter.header }}</h3>
     {% endif %}
-  {% if chapter.content != blank %}
     <a href="{{chapter.url}}" class="list-group-item">{{chapter.title }}</a>
-  {% endif %}
+  <!-- {{ chapter.content }} -->
   {% endif %}
 {% endfor %}
 </div>
