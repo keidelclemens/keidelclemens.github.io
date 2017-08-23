@@ -10,6 +10,9 @@ layout: default
 <div class="list-group chapter-list">
 {% for chapter in sorted %}
   {% if chapter.book == page.slug %}
+    {% if chapter.header %}
+      <h3>{{ chapter.header }}</h3>
+    {% endif %}
     <a href="{{chapter.url}}" class="list-group-item">{{chapter.title }}</a>
   {% endif %}
 {% endfor %}
