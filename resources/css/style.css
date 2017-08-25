@@ -67,9 +67,9 @@ header a:hover {
 nav {
     float: right;
     bottom: 0;
-    padding: 10px 20px 10px 0;
+    padding: 10px 20px 10px 20px;
     text-align: right;
-    width: 500px;
+    max-width: 500px;
 }
 
 figure {
