@@ -69,23 +69,26 @@ nav {
     bottom: 0;
     padding: 10px 20px 10px 0;
     text-align: right;
+    width: 500px;
 }
 
 figure {
     display: table;
-    width: 1px;
     border: 1px solid;
     padding: 5px;
     margin: 10px;
 }
 
-img, figcaption {
-    height: auto;
-    display: table-row;
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    border: 1px solid;
+    font-size: 80%;
 }
 
-figcaption {
-    font-size: 80%;
+img {
+    max-width:100%;
+    height: auto;
 }
 
 #content {
