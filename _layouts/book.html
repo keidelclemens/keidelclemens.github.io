@@ -7,11 +7,15 @@ layout: default
 {{page.content}}
 
 {% assign sorted = (site.chapters | sort: 'order') %}
+{% assign header = '' %}
 <div class="list-group chapter-list">
 {% for chapter in sorted %}
   {% if chapter.book == page.slug %}
     {% if chapter.header %}
+    {% if chapter.header != header %}
+      {% assign header = chapter.header %}
       <h3>{{ chapter.header }}</h3>
+    {% endif %}
     {% endif %}
   {% if chapter.content != '' %}
     <a href="{{chapter.url}}" class="list-group-item">{{chapter.title }}</a>
