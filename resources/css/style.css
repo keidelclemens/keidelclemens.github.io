@@ -61,9 +61,9 @@ header a:hover {
     color: black;
 }
 
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 699px) {
     #title {
-        font-size: 9vw;
+        font-size: 8.6vw;
     }
 }
 
