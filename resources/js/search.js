@@ -30,8 +30,7 @@
     }
   }
 
-  var searchTerm = 'ruth';
-
+  var searchTerm = getQueryVariable('query'); 
   if (searchTerm) {
     document.getElementById('search_box').setAttribute("value", searchTerm);
 
