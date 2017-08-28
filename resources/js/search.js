@@ -7,8 +7,8 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+        appendString += '<a href="' + item.url + '"><div class="flex-item"><h4>' + item.title + '</h4>';
+        appendString += item.content + '</div></a>';
       }
 
       searchResults.innerHTML = appendString;
@@ -30,7 +30,7 @@
     }
   }
 
-  var searchTerm = getQueryVariable('query');
+  var searchTerm = 'ruth';
 
   if (searchTerm) {
     document.getElementById('search_box').setAttribute("value", searchTerm);
