@@ -12,14 +12,17 @@ layout: default
 {% for chapter in sorted %}
   {% if chapter.book == page.slug %}
     {% if chapter.header %}
-    {% if chapter.header != header %}
-      {% assign header = chapter.header %}
-      <h3>{{ chapter.header }}</h3>
+      {% if chapter.header != header %}
+        {% assign header = chapter.header %}
+        <h3>{{ chapter.header }}</h3>
+      {% endif %}
     {% endif %}
+    {% if chapter.content != '' %}
+      <a href="{{chapter.url}}" class="list-group-item">{{chapter.title }}</a>
     {% endif %}
-  {% if chapter.content != '' %}
-    <a href="{{chapter.url}}" class="list-group-item">{{chapter.title }}</a>
-  {% endif %}
   {% endif %}
 {% endfor %}
+{% if page.slug == 'cambodia' %}
+  <a href="cambodia" class="list-group-item">Family Trip to Cambodia 2011</a>
+{% endif %}
 </div>
