@@ -15,4 +15,4 @@ collections:
   permalink: /:slug
  chapters:
   output: true
-  permalink: /:slug
+  permalink: /:categories/:slug
